@@ -20,6 +20,8 @@ namespace Hash_Tables
             hash.Add("3", "not");
             hash.Add("4", "to");
             hash.Add("5", "be");
+            Console.WriteLine("frequency of word is "+ hash.GetFrequencyOfWords("be") ); 
+
 
             
 
