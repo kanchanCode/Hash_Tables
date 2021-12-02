@@ -103,6 +103,25 @@ namespace Hash_Tables
             return linkedList;
         }
 
+                public int GetFrequencyOfWords(V value)
+        {
+            int count = 0;
+            if (items == null)
+            {
+                Console.WriteLine("Hash Table is Empty!");
+                return 0;
+            }
+            for (int i = 0; i < items.Length; i++)
+            {
+                LinkedList<KeyValue<K, V>> linkedList = GetLinkedList(i);
+                foreach (KeyValue<K, V> item in linkedList)
+                {
+                    if (item.Value.Equals(value))
+                        count++;
+                }
+            }
+            return count;
+        }
         
     }
     public struct KeyValue<k, v>
